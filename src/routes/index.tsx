@@ -259,7 +259,7 @@ function Ticker() {
 /* ---------------- About ---------------- */
 function About() {
   const stats = [
-    { k: "Sydney · Singapore · Hyderabad", v: "Currently based" },
+    { k: "Sydney · Singapore · Jaipur", v: "Currently based" },
     { k: "UG High Honour Roll '25", v: "Top of CS cohort" },
     { k: "Dalyell Scholar", v: "Elite USYD program" },
     { k: "2 Peer-reviewed papers", v: "Published + in progress" },
@@ -881,7 +881,7 @@ function Now() {
     "Open to research collaborations, internships in AI/robotics, and shipping side products.",
   ];
   return (
-    <Section id="now" eyebrow="/now" title={<>What I'm doing <em className="text-gradient not-italic">right now</em>.</>} kicker="Updated June 2026 · Hyderabad → Singapore → Sydney">
+    <Section id="now" eyebrow="/now" title={<>What I'm doing <em className="text-gradient not-italic">right now</em>.</>} kicker="Updated June 2026 · Jaipur → Singapore → Sydney">
       <Card className="relative overflow-hidden">
         <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
@@ -908,7 +908,7 @@ function Contact() {
     { icon: Mail, label: "Email", value: "jain.saksham2006@gmail.com", href: "mailto:jain.saksham2006@gmail.com" },
     { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/sakshamjainjpr", href: "https://linkedin.com/in/sakshamjainjpr/" },
     { icon: Phone, label: "Phone", value: "+61 478 242 775", href: "tel:+61478242775" },
-    { icon: MapPin, label: "Based in", value: "Sydney · Singapore · Hyderabad", href: "#about" },
+    { icon: MapPin, label: "Based in", value: "Sydney · Singapore · Jaipur", href: "#about" },
   ];
   return (
     <section id="contact" className="relative overflow-hidden border-t border-border">
@@ -948,7 +948,7 @@ function Contact() {
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-8 font-mono text-[10px] uppercase tracking-widest text-muted-foreground md:flex-row">
-          <div className="flex items-center gap-2"><MapPin className="h-3 w-3" /> Sydney · Singapore · Hyderabad</div>
+          <div className="flex items-center gap-2"><MapPin className="h-3 w-3" /> Sydney · Singapore · Jaipur</div>
           <div>© 2026 saksham_jain // session_terminated</div>
         </div>
       </div>
