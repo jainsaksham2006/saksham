@@ -1,0 +1,144 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-neon: var(--neon);
+  --color-neon-2: var(--neon-2);
+  --color-surface: var(--surface);
+  --font-display: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.13 0 0);
+  --foreground: oklch(0.97 0 0);
+  --surface: oklch(0.17 0 0);
+  --card: oklch(0.16 0 0);
+  --card-foreground: oklch(0.97 0 0);
+  --popover: oklch(0.16 0 0);
+  --popover-foreground: oklch(0.97 0 0);
+  --primary: oklch(0.70 0.18 255);
+  --primary-foreground: oklch(0.13 0 0);
+  --secondary: oklch(0.20 0 0);
+  --secondary-foreground: oklch(0.97 0 0);
+  --muted: oklch(0.20 0 0);
+  --muted-foreground: oklch(0.62 0.005 250);
+  --accent: oklch(0.70 0.18 255);
+  --accent-foreground: oklch(0.13 0 0);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.97 0 0);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.70 0.18 255);
+  --neon: oklch(0.72 0.19 255);
+  --neon-2: oklch(0.78 0.15 235);
+
+  --gradient-hero: radial-gradient(ellipse at top, color-mix(in oklab, var(--neon) 14%, transparent), transparent 60%),
+                   radial-gradient(ellipse at bottom right, color-mix(in oklab, var(--neon-2) 8%, transparent), transparent 55%);
+  --gradient-text: linear-gradient(135deg, oklch(0.97 0 0) 0%, var(--neon) 100%);
+  --shadow-glow: 0 0 60px -10px color-mix(in oklab, var(--neon) 35%, transparent);
+  --shadow-card: 0 1px 0 0 oklch(1 0 0 / 5%) inset, 0 10px 40px -20px oklch(0 0 0 / 60%);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
+  }
+  ::selection { background: color-mix(in oklab, var(--neon) 40%, transparent); color: var(--foreground); }
+}
+
+@utility text-gradient {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glass-card {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--surface) 70%, transparent), color-mix(in oklab, var(--surface) 30%, transparent));
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  border-radius: 0.75rem;
+}
+
+@utility lab-panel {
+  background: color-mix(in oklab, var(--surface) 60%, transparent);
+  border: 1px solid var(--border);
+  position: relative;
+  border-radius: 0.75rem;
+}
+
+@utility grid-bg {
+  background-image:
+    linear-gradient(to right, oklch(1 0 0 / 4%) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(1 0 0 / 4%) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility lab-grid {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 4%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 4%) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+
+
+
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes dash {
+  to { stroke-dashoffset: -20; }
+}
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
