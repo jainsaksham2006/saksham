@@ -273,7 +273,7 @@ function About() {
       <div className="grid gap-6 lg:grid-cols-5">
         <Card className="lg:col-span-3">
           <p className="text-lg leading-relaxed text-foreground/90">
-            I'm <span className="text-primary">Saksham Jain</span> — a Bachelor of Advanced Computing student at the University of Sydney (majoring in <span className="text-foreground">Computational Data Science</span> and <span className="text-foreground">Computer Science</span>), currently on exchange at the <span className="text-foreground">National University of Singapore</span>.
+            I'm <span className="text-primary">Saksham Jain</span> — a Bachelor of Advanced Computing student at the University of Sydney (majoring in <span className="text-foreground">Computational Data Science</span> and <span className="text-foreground">Computer Science</span>).
           </p>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
             My work spans large language models, vision-language robotics, meta-learning, and full-stack data systems. I've worked as a Research Assistant at NUS on automatic LLM strategy selection, as an AI Engineer Intern at CruvixAI building language-grounded robotic manipulation, and as a Technology Intern at Deloitte architecting real-time manufacturing dashboards across four factories.
