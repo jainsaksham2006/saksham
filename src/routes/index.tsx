@@ -220,7 +220,7 @@ function Hero() {
             <div className="mt-5 grid grid-cols-3 gap-1.5 font-mono text-[9px] uppercase tracking-widest text-muted-foreground/70">
               <div className="rounded-sm border border-border bg-secondary/30 px-2 py-1.5 text-center">SYD</div>
               <div className="rounded-sm border border-border bg-secondary/30 px-2 py-1.5 text-center">SGP</div>
-              <div className="rounded-sm border border-border bg-secondary/30 px-2 py-1.5 text-center">HYD</div>
+              <div className="rounded-sm border border-border bg-secondary/30 px-2 py-1.5 text-center">JAI</div>
             </div>
           </div>
         </motion.aside>
@@ -318,7 +318,7 @@ type Exp = {
 };
 const experiences: Exp[] = [
   {
-    role: "AI Engineer Intern", company: "CruvixAI", location: "Hyderabad, India",
+    role: "AI Engineer Intern", company: "CruvixAI", location: "JAIerabad, India",
     period: "Jun 2026 — Present", tag: "Current",
     icon: Bot,
     bullets: [
