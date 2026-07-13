@@ -318,7 +318,7 @@ type Exp = {
 };
 const experiences: Exp[] = [
   {
-    role: "AI Engineer Intern", company: "CruvixAI", location: "JAIerabad, India",
+    role: "AI Engineer Intern", company: "CruvixAI", location: "Hyderabad, India",
     period: "Jun 2026 — Present", tag: "Current",
     icon: Bot,
     bullets: [
